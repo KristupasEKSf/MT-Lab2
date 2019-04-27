@@ -94,7 +94,6 @@
 
           this.el.addEventListener('click', function (evt) {
               var cameraRigEl = document.querySelector("#camera");
-
               temp_x = Math.floor(Math.random() * 4);
               temp_x *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
               temp_y = Math.floor(Math.random() * 4);
@@ -126,7 +125,6 @@
           this.el.addEventListener('click', function (evt) {
               var sphereEl = document.querySelector("#sphere");
               var visibleStatus = sphereEl.getAttribute("visible");
-
               if (visibleStatus == true){
                   sphereEl.setAttribute("visible", false);
               }
@@ -139,7 +137,6 @@
           this.el.addEventListener('click', function (evt) {
               var sphereEl = document.querySelector("#sphere");
               var visibleStatus = sphereEl.getAttribute("visible");
-
               if (visibleStatus == false){
                   sphereEl.setAttribute("visible", true);
               }
@@ -186,6 +183,77 @@
             </a-animation>
         </a-pointcloud>
 
+        <a-gui-flex-container
+          	flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="0.7" width="3.5" height="5.5"
+          	position="2 2.5 -4" rotation="0 0 0">
+
+            <a-gui-label
+                id="labelText"
+                width="2.5" height="0.75"
+                font-family="Arial"
+                margin="0 0 0.05 0"
+                visible="false"
+                value="You look good!"
+                background-color="green">
+            </a-gui-label>
+
+            <a-gui-icon-label-button
+            	width="2.5" height="0.75"
+            	value="Compliment"
+            	font-family="Arial"
+            	margin="0 0 0.05 0"
+                show-compliment>
+            </a-gui-icon-label-button>
+
+            <a-gui-button
+        		width="2.5" height="0.75"
+                active-color = "#ffffff"
+                background-color = "#f44245"
+                hover-color="#f44265"
+                font-color="#fff1cc"
+        		value="show sphere"
+        		font-family="Arial"
+        		margin="0 0 0.05 0"
+                on-sphere>
+        	</a-gui-button>
+
+            <a-gui-button
+        		width="2.5" height="0.75"
+                active-color = "#ffffff"
+                background-color = "#f44245"
+                hover-color="#f44265"
+                font-color="#fff1cc"
+        		value="hide sphere"
+        		font-family="Arial"
+        		margin="0 0 0.05 0"
+                off-sphere>
+        	</a-gui-button>
+
+            <a-gui-button
+                width="2.5" height="0.75"
+                active-color = "#ffffff"
+                background-color = "#f44245"
+                hover-color="#f44265"
+                font-color="#fff1cc"
+                value="change camera"
+                font-family="Arial"
+                margin="0 0 0.05 0"
+                change-camera>
+            </a-gui-button>
+
+            <a-gui-button
+                width="2.5" height="0.75"
+                active-color = "#ffffff"
+                background-color = "#f44245"
+                hover-color="#f44265"
+                font-color="#fff1cc"
+                value="change background"
+                font-family="Arial"
+                margin="0 0 0.05 0"
+                change-bg>
+            </a-gui-button>
+        </a-gui-flex-container>
+      
     </a-scene>
   </body>
 </html>
